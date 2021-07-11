@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap");
+@import url(_header.scss);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  max-width: 1000px;
+  overflow: hidden;
+}
+
+header {
+  width: 100%;
+  background: #281a0c;
+  background-image: url(../img/bg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center 0;
+}
+header .container {
+  position: relative;
+  height: 700px;
+}
+header .nav__main {
+  width: 100%;
+  text-align: right;
+}
+header .nav__main a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-block;
+  margin: 40px 20px;
+  position: relative;
+}
+header .nav__main a:hover {
+  text-decoration: underline;
+}
+header .texts__main {
+  width: 100%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  margin-top: -52px;
+}
+header .texts__main .name {
+  font-size: 3rem;
+  font-weight: 500;
+}
+header .texts__main .name span {
+  font-weight: 400;
+  color: #f2f2f2b2;
+  text-decoration: underline;
+}
+header .texts__main h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.main {
+  background-image: url(../img/textura.png);
+}
+.main .about__main .container {
+  overflow: visible;
+  position: relative;
+}
+.main .about__main .container .img {
+  width: 80%;
+  position: absolute;
+  left: 0;
+  top: -50px;
+  z-index: 0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
+}
+.main .about__main .container .img img {
+  vertical-align: top;
+  width: 100%;
+}
+.main .about__text {
+  padding: 40px;
+  width: 50%;
+  position: relative;
+  background: #fff;
+  z-index: 1;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
+  float: right;
+  top: 800px;
+}
+.main .about__text h3 {
+  margin-bottom: 30px;
+  font-size: 50px;
+  font-weight: lighter;
+}
+.main .about__text p {
+  line-height: 26px;
+  margin-bottom: 15px;
+}
+.main .menu__main {
+  padding-top: 35.625rem;
+  margin-bottom: 3rem;
+}
+.main .menu__main .title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.main .menu__main .container__menu {
+  border: 1px solid #000;
+  background: transparent;
+  padding: 10px;
+  overflow: hidden;
+}
+.main .menu__main .container__menu2 {
+  border: 1px solid #000;
+  background: transparent;
+  padding: 10px;
+  overflow: hidden;
+}
+.main .menu__main article {
+  width: 50%;
+  float: left;
+  padding: 1.3rem;
+}
+.main .menu__main article .category {
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+.main .menu__main article .product {
+  margin-bottom: 1.8rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 2px solid #6d481e;
+  overflow: hidden;
+}
+.main .menu__main article .product .name {
+  font-size: 1.2rem;
+  margin-bottom: 0.9rem;
+  float: left;
+}
+.main .menu__main article .product .price {
+  font-size: 1.2rem;
+  margin-bottom: 0.9rem;
+  float: right;
+}
+.main .menu__main article .product .description {
+  font-size: 1rem;
+  color: #676767;
+  clear: both;
+}
+.main .gallery {
+  max-width: 90%;
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+.main .gallery .container {
+  width: 90%;
+  max-width: 1200px;
+  overflow: hidden;
+  margin: auto;
+  padding: 3.438rem 0;
+}
+.main .gallery .container .gallery__title {
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+}
+.main .gallery .container .gallery__main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.main .gallery .container .gallery__main .img__gallery {
+  object-fit: cover;
+  width: 24%;
+  display: block;
+  margin-bottom: 0.9375rem;
+  box-shadow: 0 0 0.375rem rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.main .image__light {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(100%);
+  transition: transform 0.2 ease-in-out;
+}
+.main .show {
+  transform: translate(0);
+  z-index: 2;
+}
+.main .add__image {
+  object-fit: cover;
+  width: 60%;
+  border-radius: 0.625rem;
+  transform: scale(0);
+  transition: transform 0.3s 0.2s;
+}
+.main .show__image {
+  transform: scale(0.7);
+}
+.main .close {
+  position: absolute;
+  top: 0.9375rem;
+  right: 0.9375rem;
+  cursor: pointer;
+  width: 2.5rem;
+}
+.main .location__main {
+  background: #fff;
+  padding: 3.75rem;
+  overflow: hidden;
+}
+.main .location__main .location__title {
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+}
+.main .location__main .address {
+  float: left;
+  width: 50%;
+  text-align: left;
+}
+.main .location__main .address .street {
+  margin-bottom: 0.9rem;
+}
+.main .location__main .timetable {
+  float: right;
+  width: 50%;
+  text-align: right;
+  overflow: hidden;
+}
+.main .location__main .timetable h4 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.main .location__main .timetable .between {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+.main .location__main .timetable .weekend {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+.main .map {
+  width: 100%;
+  overflow: hidden;
+}
+.main .map iframe {
+  width: 100%;
+  max-width: 100vw;
+}
+
+footer .container {
+  width: 100%;
+  max-width: 100%;
+}
+footer .container .copyright {
+  text-align: center;
+  padding: 0.9rem 0;
+  color: #f2f2f2;
+  background: #a16325;
+  width: 100%;
+}
+footer .container .copyright a {
+  color: white;
+}
+
+/* ------------------------------ Media-Queries ----------------------------- */
+@media screen and (max-width: 800px) {
+  header .container {
+    position: static;
+    height: auto;
+  }
+  header .container .texts__main {
+    position: static;
+    margin: 6.25rem 0;
+    padding-top: 6rem;
+  }
+  header .container .texts__main .name {
+    font-size: 1.9rem;
+  }
+  header .container .texts__main h3 {
+    font-size: 18px;
+  }
+  header .container .nav__main {
+    text-align: center;
+    display: flex;
+  }
+  header .container .nav__main a {
+    margin: 20px 10px;
+  }
+  .main .about__main .container .img {
+    width: 100%;
+    position: relative;
+  }
+  .main .about__main .container .about__text {
+    position: relative;
+    width: 100%;
+    top: -50px;
+    transform: translate(0px, 0);
+  }
+  .main .menu__main {
+    padding-top: 18rem;
+  }
+  .main .menu__main article {
+    width: 100%;
+  }
+  .main .gallery .container .gallery__main .img__gallery {
+    width: 48%;
+  }
+  .main .add__image {
+    width: 70%;
+  }
+  .main .map {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main .about__main .container .about__text {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  .main .about__main .container .about__text h3 {
+    font-size: 2.3rem;
+  }
+  .main .menu__main .product .name {
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+  }
+  .main .menu__main .product .price {
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+  }
+  .main .location__main {
+    padding: 3.75rem 1rem;
+  }
+  .main .location__main .container {
+    width: 100%;
+    margin: auto;
+  }
+  .main .location__main .address {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .main .location__main .timetable {
+    width: 100%;
+    text-align: center;
+  }
+  .map {
+    width: 80%;
+    margin: auto;
+  }
+}

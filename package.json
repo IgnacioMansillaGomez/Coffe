@@ -1,0 +1,15 @@
+{
+  "name": "coffe",
+  "version": "1.0.0",
+  "description": "Coffe",
+  "main": "index.html",
+  "scripts": {
+    "test": "test",
+    "sa": "node-sass --watch scss/style.scss css/style.css"
+  },
+  "author": "IgnacioMansilla",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
