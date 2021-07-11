@@ -14,7 +14,9 @@ Index
 ### Screenshot
 
 ![](/img/Coffe-Desk.png)
-![](/img/Coffe-Mobile)
+![](/img/Coffe-Mobile.png)
+![](/img/Coffe-Parallax.png)
+![](/img/Coffe-Gallery.png)
 
 ### Links
 
